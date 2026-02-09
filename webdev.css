@@ -1,0 +1,15 @@
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: cornsilk;
+    position: relative;
+}
+.delete{
+    background-color: pink;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}

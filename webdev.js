@@ -149,45 +149,68 @@
 
 //      }
 
-function doHomework() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      let homeworkDone = true;
-      if (homeworkDone) {
-        console.log("Homework is done");
-        resolve("Homework complete");
-      } else {
-        reject("Homework not done");
-      }
-    }, 3000);
-  })
-  return p;
-}
+// function doHomework() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       let homeworkDone = true;
+//       if (homeworkDone) {
+//         console.log("Homework is done");
+//         resolve("Homework complete");
+//       } else {
+//         reject("Homework not done");
+//       }
+//     }, 3000);
+//   })
+//   return p;
+// }
 
-function eatDinner() {
-return new Promise((resolve, reject) => {
-setTimeout(() => {
-let dinnerEaten = true;
-if (dinnerEaten) {
-console.log(" Dinner is eaten");
-resolve("Dinner complete");
-} else {
-reject(" Didn't eat dinner");
-}
-}, 2000);
+// function eatDinner() {
+// return new Promise((resolve, reject) => {
+// setTimeout(() => {
+// let dinnerEaten = true;
+// if (dinnerEaten) {
+// console.log(" Dinner is eaten");
+// resolve("Dinner complete");
+// } else {
+// reject(" Didn't eat dinner");
+// }
+// }, 2000);
+// });
+// }
+
+// function goToPlayground() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       let permission = true;
+//       if (permission) {
+//         console.log("Went to the playground");
+//         resolve("Playground time!");
+//       } else {
+//         reject("Not allowed to go out");
+//       }
+//     }, 3000);
+//   });
+// }
+form.addEventListener('submit', (event) => {
+    const card = document.createElement('div');
+
+    card.innerHTML = `
+        <div class="card">
+            <h2>${title}</h2>
+            <p>${date}</p>
+            <button>${category}</button>
+            <p>${description}</p>
+            <button class="delete">❌</button>
+        </div>
+    `;
+
+    card.querySelector('.delete').addEventListener('click', () => {
+        card.remove();
+    });
+
+    eventCard.appendChild(card);
 });
-}
 
-function goToPlayground() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      let permission = true;
-      if (permission) {
-        console.log("Went to the playground");
-        resolve("Playground time!");
-      } else {
-        reject("Not allowed to go out");
-      }
-    }, 3000);
-  });
-}
+document.addEventListener('keydown', (event) => {
+    console.log(event.key);
+});
