@@ -191,26 +191,75 @@
 //     }, 3000);
 //   });
 // }
-form.addEventListener('submit', (event) => {
-    const card = document.createElement('div');
+// form.addEventListener('submit', (event) => {
+//     const card = document.createElement('div');
 
+//     card.innerHTML = `
+//         <div class="card">
+//             <h2>${title}</h2>
+//             <p>${date}</p>
+//             <button>${category}</button>
+//             <p>${description}</p>
+//             <button class="delete">❌</button>
+//         </div>
+//     `;
+
+//     card.querySelector('.delete').addEventListener('click', () => {
+//         card.remove();
+//     });
+
+//     eventCard.appendChild(card);
+// });
+
+// document.addEventListener('keydown', (event) => {
+//     console.log(event.key);
+// });
+
+const eventForm = document.getElementById('event-form');
+const eventList = document.getElementById('event-list');
+const keyDisplay = document.getElementById('key-display');
+const clearBtn = document.getElementById('clear-all');
+
+
+eventForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const title = document.getElementById('title').value;
+    const date = document.getElementById('date').value;
+    const category = document.getElementById('category').value;
+    const desc = document.getElementById('description').value;
+
+    createEventCard(title, date, category, desc);
+    eventForm.reset();
+});
+
+
+function createEventCard(title, date, category, desc) {
+    const card = document.createElement('div');
+    card.className = 'event-item';
+    
     card.innerHTML = `
-        <div class="card">
-            <h2>${title}</h2>
-            <p>${date}</p>
-            <button>${category}</button>
-            <p>${description}</p>
-            <button class="delete">❌</button>
-        </div>
+        <button class="delete-btn">×</button>
+        <h3>${title}</h3>
+        <p> ${date}</p>
+        <span class="badge">${category}</span>
+        <p>${desc}</p>
     `;
 
-    card.querySelector('.delete').addEventListener('click', () => {
+    
+    card.querySelector('.delete-btn').addEventListener('click', () => {
         card.remove();
     });
 
-    eventCard.appendChild(card);
+    eventList.appendChild(card);
+}
+
+
+clearBtn.addEventListener('click', () => {
+    eventList.innerHTML = '';
 });
 
-document.addEventListener('keydown', (event) => {
-    console.log(event.key);
+
+document.addEventListener('keydown', (e) => {
+    keyDisplay.textContent = e.key;
 });
