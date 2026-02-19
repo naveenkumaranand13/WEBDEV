@@ -215,49 +215,84 @@
 //     console.log(event.key);
 // });
 
-const eventForm = document.getElementById('event-form');
-const eventList = document.getElementById('event-list');
-const keyDisplay = document.getElementById('key-display');
-const clearBtn = document.getElementById('clear-all');
-const sampleBtn = document.getElementById('add-sample');    
-eventForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+// const eventForm = document.getElementById('event-form');
+// const eventList = document.getElementById('event-list');
+// const keyDisplay = document.getElementById('key-display');
+// const clearBtn = document.getElementById('clear-all');
+// const sampleBtn = document.getElementById('add-sample');    
+// eventForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
     
-    const title = document.getElementById('title').value;
-    const date = document.getElementById('date').value;
-    const category = document.getElementById('category').value;
-    const desc = document.getElementById('description').value;
+//     const title = document.getElementById('title').value;
+//     const date = document.getElementById('date').value;
+//     const category = document.getElementById('category').value;
+//     const desc = document.getElementById('description').value;
 
-    createEventCard(title, date, category, desc);
-    eventForm.reset();
-});
-function createEventCard(title, date, category, desc) {
-    const card = document.createElement('div');
-    card.className = 'event-item';
+//     createEventCard(title, date, category, desc);
+//     eventForm.reset();
+// });
+// function createEventCard(title, date, category, desc) {
+//     const card = document.createElement('div');
+//     card.className = 'event-item';
     
-    card.innerHTML = `
-        <button class="delete-btn">×</button>
-        <h3>${title}</h3>
-        <p> ${date}</p>
-        <span class="badge">${category}</span>
-        <p>${desc}</p>
-    `;
+//     card.innerHTML = `
+//         <button class="delete-btn">×</button>
+//         <h3>${title}</h3>
+//         <p> ${date}</p>
+//         <span class="badge">${category}</span>
+//         <p>${desc}</p>
+//     `;
     
-    card.querySelector('.delete-btn').addEventListener('click', () => {
-        card.remove();
-    });
+//     card.querySelector('.delete-btn').addEventListener('click', () => {
+//         card.remove();
+//     });
 
-    eventList.appendChild(card);
-} 
- sampleBtn.addEventListener('click', () => {
-    createEventCard('Sample Event', '2026-12-31', 'Work', 'This is a sample event description.');
-});
+//     eventList.appendChild(card);
+// } 
+//  sampleBtn.addEventListener('click', () => {
+//     createEventCard('Sample Event', '2026-12-31', 'Work', 'This is a sample event description.');
+// });
 
-clearBtn.addEventListener('click', () => {
-    eventList.innerHTML = '';
-});
+// clearBtn.addEventListener('click', () => {
+//     eventList.innerHTML = '';
+// });
 
 
-document.addEventListener('keydown', (e) => {
-    keyDisplay.textContent = e.key;
-});
+// document.addEventListener('keydown', (e) => {
+//     keyDisplay.textContent = e.key;
+// });
+
+// let obj={
+//     name:"John",
+//     age:30,   
+// }
+
+// localStorage.setItem("obj",JSON.stringify(obj))
+
+
+// localStorage.setItem("name","John")
+// localStorage.setItem("age",30)
+
+// console.log(localStorage.getItem("name"))
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("age")
+// localStorage.clear() //clear everything in local storage
+
+// sessionStorage.setItem("name","John")
+// sessionStorage.setItem("age",30)
+
+// console.log(sessionStorage.getItem("name"))
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("age")
+// sessionStorage.clear() //clear everything in session storage
+
+// document.cookie="name=John; expires=Fri, 20 FEB 2026 23:59:59 UTC;"
+// document.cookie="age=30; expires=Fri, 18 FEB 2026 23:59:59 UTC;"
+
+
+// async function sample(){
+//     await fetch("https://http://127.0.0.1:5500/jss.js")
+// }
+// sample()

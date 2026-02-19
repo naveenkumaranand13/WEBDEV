@@ -14,7 +14,7 @@
     height: 30px;
 } */
 
-body {
+/* body {
     background: linear-gradient(135deg, #dcb4a8, #9d6245);
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -74,7 +74,7 @@ input, select, textarea {
     margin-bottom: 20px;
 }
 /* Event Cards */
-.event-grid {
+/* .event-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
@@ -106,7 +106,7 @@ input, select, textarea {
     font-size: 0.8rem;
 }
 /* Footer Demo */
-.footer-section {
+/* .footer-section {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -114,4 +114,4 @@ input, select, textarea {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 8px;
-}
+}  */ 
