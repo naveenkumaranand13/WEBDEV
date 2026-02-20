@@ -293,6 +293,52 @@
 
 
 // async function sample(){
-//     await fetch("https://http://127.0.0.1:5500/jss.js")
+//     await fetch("http://127.0.0.1:5500/webdev.html")
 // }
 // sample()
+
+// function*generator(){
+//     yield 1
+//     yield 2
+//     yield 3
+// }
+
+// const res=generator()
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+// console.log(res.next())
+
+// function add(a){
+//     return function(b){
+//         return function(c){
+//         return a+b
+//         }
+//     }
+// }
+
+// const add = a => b => c => a + b + c
+
+// console.log(add(2)(3)(4))
+
+// const firstadd = add(34)
+// const second = firstadd(44)
+// const third= second(2)
+// console.log(third)
+
+const API_key = "AIzaSyC9l8n2sXo7mLh1a3j5v6b7c8d9e0f1g2"
+const city=document.querySelector("#city")
+const search=document.querySelector("#search")
+
+search.addEventListener("click",async(e)=>{
+    e.preventDefault()
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${API_key}`)
+    const weatherdata=await response.json()
+    console.log(weatherdata)
+    console.log("city:", weatherdata.name)
+    console.log("temperature:", (weatherdata.main.temp -273).toFixed(1) + "°C")
+    console.log("weather:", weatherdata.weather[0].main)
+    console.log("humidity:", weatherdata.main.humidity)
+    console.log("wind:", weatherdata.wind.speed + "miles/hr")
+
+})
