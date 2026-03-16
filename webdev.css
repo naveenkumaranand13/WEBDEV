@@ -123,7 +123,7 @@ input, select, textarea {
 
 body {
     font-family: Arial, sans-serif;
-    background: rgb(188, 229, 234);
+    background: rgb(234, 210, 188);
     min-height: 100vh;
     padding: 40px 24px;
     color: #1a161f;
@@ -169,7 +169,7 @@ h1 {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #3ba4d1;
+    color: #d18b3b;
     margin-bottom: 14px;
 }
 
@@ -181,27 +181,27 @@ h1 {
 #cityInput {
     flex: 1;
     padding: 10px 14px;
-    border: 1px solid rgba(120, 141, 210, 0.4);
+    border: 1px solid rgba(210, 174, 120, 0.4);
     border-radius: 10px;
     font-size: 0.9rem;
     background: rgba(255, 255, 255, 0.5);
-    color: #2e2438;
+    color: #382d24;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 #cityInput::placeholder {
-    color: #a0c8d8;
+    color: #d8b8a0;
 }
 
 #cityInput:focus {
-    border-color: #6fc8d8;
-    box-shadow: 0 0 0 3px rgba(100, 152, 220, 0.15);
+    border-color: #d89d6f;
+    box-shadow: 0 0 0 3px rgba(220, 158, 100, 0.15);
 }
 
 #btn {
     padding: 10px 20px;
-    background: #84fcfa;
+    background: #fcaa84;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -213,7 +213,7 @@ h1 {
 }
 
 #btn:hover {
-    background: #53c9db;
+    background: #dbae53;
 }
 
 #btn:active {
@@ -228,14 +228,14 @@ h1 {
 }
 
 .searchedCities p {
-    color: #a0ced8;
+    color: #d8b5a0;
     font-size: 0.82rem;
 }
 
 .chip {
-    background: rgba(84, 118, 168, 0.133);
-    color: #4abcd3;
-    border: 1px solid rgba(22, 21, 90, 0.45);
+    background: rgba(168, 122, 84, 0.133);
+    color: #d3984a;
+    border: 1px solid rgba(90, 62, 21, 0.45);
     border-radius: 20px;
     padding: 4px 14px;
     font-size: 0.78rem;
@@ -245,7 +245,7 @@ h1 {
 }
 
 .chip:hover {
-    background: rgba(132, 154, 252, 0.4);
+    background: rgba(252, 192, 132, 0.4);
 }
 
 #fetchData {
@@ -253,7 +253,7 @@ h1 {
 }
 
 .error {
-    color: #26add3;
+    color: #d36b26;
     font-size: 0.88rem;
 }
 
@@ -262,25 +262,25 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px 10px 14px;
-    border-left: 3px solid rgba(132, 184, 252, 0.6);
+    border-left: 3px solid rgba(252, 200, 132, 0.6);
     margin-bottom: 6px;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 0 8px 8px 0;
 }
 
 .weather-row .label {
-    color: #5f8bc0;
+    color: #c08e5f;
     font-size: 0.82rem;
 }
 
 .weather-row .value {
-    color: #393560;
+    color: #604b35;
     font-weight: 600;
     font-size: 0.9rem;
 }
 
 #consoleOutput {
-    background: rgba(148, 158, 205, 0.285);
+    background: rgba(205, 181, 148, 0.285);
     border-radius: 10px;
     padding: 14px 16px;
     min-height: 110px;
@@ -306,8 +306,8 @@ h1 {
     flex-shrink: 0;
 }
 
-.log.sync  .log-dot { background: #a78bfa; }
-.log.async .log-dot { background: #abcbfc; }
+.log.sync  .log-dot { background: #8bfaa9; }
+.log.async .log-dot { background: #fcabe4; }
 .log.macro .log-dot { background: #fbbf24; }
 .log.error .log-dot { background: #f87171; }
 
